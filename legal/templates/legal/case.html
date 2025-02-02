@@ -1,0 +1,15 @@
+{% extends 'legal/base.html' %}
+{% block content %}
+<p>Case No : {{ case.case_no }}</p>
+{% if case %}
+<p>{{case.case_no}}</p>
+<p>{{case.description}}</p>
+<p>{{case.judge}}</p>
+<p>{{case.court}}</p>
+<p>{{case.date}}</p>
+<p>{{case.date_added}}</p>
+{% else %}
+<li>No case have been added yet.</li>
+{% endif %}
+
+{% endblock content %}

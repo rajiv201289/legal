@@ -1,0 +1,17 @@
+{% extends 'legal/base.html' %}
+
+
+{% block content %}
+<ul>
+    {% for case in cases %}
+    <li>
+        <a href="{% url 'legal:case' case.id %}">
+            {{ case.case_no}}</a>
+        <a href="{% url 'legal:delete_case' case.id %}">Delete</a>
+    </li>
+    {% empty %}
+    <li>No case have been added yet.</li>
+    {% endfor %}
+</ul>
+<a href="{% url 'legal:new_case' %}">Add a new case</a>
+{% endblock content %}

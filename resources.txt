@@ -1,0 +1,2 @@
+command to connect aws rds to django
+mysql -h <endpoint> -P 3306 -u <mymasteruser> -p

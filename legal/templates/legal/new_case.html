@@ -1,0 +1,10 @@
+{% extends 'legal/base.html' %}
+
+{% block content %}
+<p>Add a new case :</p>
+<form action="{% url 'legal:new_case' %}" method="post">
+    {% csrf_token %}
+    {{ form.as_div }}
+    <button name="submit">Add</button>
+</form>
+{% endblock content %}
